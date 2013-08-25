@@ -6,7 +6,7 @@
       }
 </style>
 <div class="container">
-<h3>AudioQuest MAE</h3>
+<h3>Base MAE</h3>
 	<div class="login-form">
 		<?php echo $this->Form->create('User'); ?>
 			<fieldset>
