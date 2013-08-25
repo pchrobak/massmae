@@ -1,0 +1,166 @@
+
+/***************************************************************************************************
+/	DEFAULT STYLES
+/***************************************************************************************************/
+.input-mysize-medium { width: 350px; }
+.input-mysize-textarea { width: 98%; }
+.imgleft{padding:5px 5px 100px 5px;}
+.input.file{ padding: 20px 0px 20px 0px;width:385px;text-align:middle}
+#cake-breadcrumbs {
+	padding:5px 0 0 4px;
+	margin: 0 0 10px 0;
+	border-bottom:1px solid #e5e5e5;
+	font-size:smaller;}
+	
+legend{border:none !important;	}
+}
+.sidebar-indent{padding-left:10px;}
+.well{
+	background-color:#fff !important;
+}
+
+.delete_item {color:#fff;}
+.delete_item a:hover  {color:#fff;}
+/***************************************************************************************************
+/	FLASH MESSAGES
+/***************************************************************************************************/
+ .error_message{
+  padding: 8px 35px 8px 14px;
+  margin-bottom: 21px;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  border: 1px solid #be001e;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+   background-color: #cd0200;
+  color: #ffffff;
+ }
+ 
+ .success_message{
+  padding: 8px 35px 8px 14px;
+  margin-bottom: 21px;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  border: 1px solid #818b30;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  background-color: #819e37;
+  color: #ffffff;
+ }
+ 
+ .error-message{
+	  color: #CC0000;
+	  float:right;
+ }
+ 
+ .form-error {
+	-webkit-box-shadow:rgba(0, 0, 0, 0.0745098) 0 1px 1px inset !important; 
+  border-color:#CC0000!important;
+  box-shadow:rgba(0, 0, 0, 0.0745098) 0 1px 1px inset !important;
+ }
+ 
+#cke_ProductBodyCopy {margin: 10px 0 20px 0;}
+/***************************************************************************************************
+/	LOGIN PAGE AND AUTH UTILITIES
+/***************************************************************************************************/
+ .login-form {
+		margin-left: 65px;
+		 background-color: #fff;
+        padding: 20px;
+        margin: 0 -20px; 
+        -webkit-border-radius: 10px 10px 10px 10px;
+           -moz-border-radius: 10px 10px 10px 10px;
+                border-radius: 10px 10px 10px 10px;
+        -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.15);
+           -moz-box-shadow: 0 1px 2px rgba(0,0,0,.15);
+                box-shadow: 0 1px 2px rgba(0,0,0,.15);
+	  }
+	  
+	   .page-content {
+		margin-left: 65px;
+		 background-color: #fff;
+        padding: 20px;
+        margin: 0 -20px; 
+        -webkit-border-radius: 10px 10px 10px 10px;
+           -moz-border-radius: 10px 10px 10px 10px;
+                border-radius: 10px 10px 10px 10px;
+        -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.15);
+           -moz-box-shadow: 0 1px 2px rgba(0,0,0,.15);
+                box-shadow: 0 1px 2px rgba(0,0,0,.15);
+	  }
+
+ #login-info{
+	float:right;
+	padding:0 0 7px 0;
+	margin:0px
+	
+}
+
+.container {
+        width: 70% !important;
+}
+/***************************************************************************************************
+/	FOOTER
+/***************************************************************************************************/
+#footer-text{
+	text-align:center;
+	width:100%;
+	padding:10px 0 0px 0;
+}
+
+
+/***************************************************************************************************
+/	PICK LISTS
+/***************************************************************************************************/
+
+#from_ProductProduct,
+#from_DownloadDownload,
+#from_IngredientIngredient,
+#from_CategoryCategory,
+#from_FinishFinish{
+	float:left;
+}
+.pickListContainer {
+	/* this class gets added to the container */
+	padding-bottom:15px;
+	}
+	
+.pickListFrom {
+	text-align:left;
+	border:1px solid green;
+	}
+	
+.pickListContainer .pickListButtons {
+	/* this is a div that gets added between the select boxes and holds the buttons */
+	text-align:center;
+	margin:0;
+	padding:1.5em 1em 0 1em;
+	visibility:visible;
+	height:0em;
+	float:left;
+	}
+
+.pickListContainer select {
+	/* you can style the selects within the container specifically */ 
+	height:14em;
+	width:45%;
+	border:1px solid #aaa;
+	}
+
+.pickListContainer button {
+	/* you can style the buttons within the container specifically */ 
+	display:block;
+	margin: 0 0 10px 0;
+	}
+
+.pickListContainer button img {
+  margin-bottom:0;
+	}
+
+ .pickListContainer div {
+/*  clear:both;*/
+  }
+
+option[disabled] {
+	background-color:#2b2b2b;
+	}
