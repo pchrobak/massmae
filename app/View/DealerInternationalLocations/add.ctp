@@ -25,7 +25,7 @@
 			<legend><?php echo __('Add Location'); ?> <button class="btn pull-right"><?php echo $this->Html->link(__('List Locations'), array('action' => 'index')); ?></button></legend>
 		<?php
 		echo $this->Form->input('visible');
-		echo $this->Form->input('type', array('class' => 'input-xlarge', 'options'=> array('international'=>'International Dealer','distributor'=>'International Distributor'), 'empty'=>'Select Type of International Dealer', 'label'=>'Unit Of Measure'));
+		echo $this->Form->input('type', array('class' => 'input-xlarge', 'options'=> array('international'=>'International Dealer','distributor'=>'International Distributor'), 'empty'=>'Select Type of International Dealer', 'label'=>'Dealer Type'));
 		echo $this->Form->input('company_name', array('class' => 'input-xxlarge'));
 		echo $this->Form->input('address', array('class' => 'ckeditor'));
 		echo $this->Form->input('phone', array('class' => 'input-xxlarge'));

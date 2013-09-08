@@ -17,22 +17,12 @@ class SitePage extends AppModel {
 		'title' => array(
             'rule'    => 'notEmpty',
             'required' => true,
-            'message'  => 'This field cannot be blank'
-        ),
-		'directory' => array(
-            'rule'    => 'notEmpty',
-            'required' => true,
-            'message'  => 'This field cannot be blank'
+            'message'  => 'You must enter a title'
         ),
 		'page_text' => array(
-            'rule'    => array('minLength', 5),
+            'rule'    => 'notEmpty',
             'required' => true,
-            'message'  => 'This field cannot be blank'
-        ),
-		'visible' => array(
-            'rule'    => 'numeric',
-            'required' => true,
-            'message'  => 'This field cannot be blank'
+            'message'  => 'You must enter text for this page'
         )
 		
 	);

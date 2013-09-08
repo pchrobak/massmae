@@ -1,6 +1,6 @@
 <?php // app/Controller/UsersController.php
 class UsersController extends AppController {
-
+	
 	public function login() {
 		if ($this->request->is('post')) {
 			if ($this->Auth->login()) {
@@ -33,11 +33,11 @@ class UsersController extends AppController {
         if ($this->request->is('post')) {
             $this->User->create();
             if ($this->User->save($this->request->data)) {
-                $this->Session->setFlash(__('The user has been saved', 'default', array('class' => 'success_message')));
-                $this->redirect(array('action' => 'index'));
-            } else {
-                $this->Session->setFlash('The user could not be saved. Please, try again.', 'default', array('class' => 'error_message'));
-            }
+              $this->Session->setFlash('You have successfully Saved a user!', 'default', array('class' => 'success_message'));
+				$this->redirect(array('action' => 'index'));
+			} else {
+				$this->Session->setFlash('There was an error in saving this form.  Please make sure all require fields are filled in', 'default', array('class' => 'error_message'));
+			}
         }
     }
 
@@ -48,10 +48,10 @@ class UsersController extends AppController {
         }
         if ($this->request->is('post') || $this->request->is('put')) {
             if ($this->User->save($this->request->data)) {
-                $this->Session->setFlash(__('The user has been saved', 'default', array('class' => 'success_message')));
+                $this->Session->setFlash('The user has been saved', 'default', array('class' => 'success_message'));
                 $this->redirect(array('action' => 'index'));
             } else {
-                $this->Session->setFlash(__('The user could not be saved. Please, try again.', 'default', array('class' => 'error_message')));
+                $this->Session->setFlash('The user could not be saved. Please, try again.', 'default', array('class' => 'error_message'));
             }
         } else {
             $this->request->data = $this->User->read(null, $id);
@@ -68,10 +68,10 @@ class UsersController extends AppController {
             throw new NotFoundException(__('Invalid user'));
         }
         if ($this->User->delete()) {
-            $this->Session->setFlash(__('User deleted', 'default', array('class' => 'success_message')));
-            $this->redirect(array('action' => 'index'));
-        }
-        $this->Session->setFlash(__('User was not deleted', 'default', array('class' => 'error_message')));
-        $this->redirect(array('action' => 'index'));
+			$this->Session->setFlash('User was successfully deleted!', 'default', array('class' => 'success_message'));
+			$this->redirect(array('action' => 'index'));
+		}
+		$this->Session->setFlash('User was not deleted', 'default', array('class' => 'error_message'));
+		$this->redirect(array('action' => 'index'));
     }
 }

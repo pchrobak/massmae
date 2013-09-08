@@ -64,7 +64,7 @@ Examples:
 
 ATTENTION: The trailing slash is required.
 */
-$baseUrl = '/demo/audioquest/cms/app/webroot/js/ckfinder/userfiles/';
+$baseUrl = '/basecms/app/webroot/js/ckfinder/userfiles/';
 
 /*
 $baseDir : the path to the local directory (in the server) which points to the

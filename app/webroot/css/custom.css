@@ -50,13 +50,15 @@ legend{border:none !important;	}
  
  .error-message{
 	  color: #CC0000;
-	  float:right;
+	  font-weight:bold;
+	  display:block;
+	  padding:5px 0 10px 0;
  }
  
  .form-error {
 	-webkit-box-shadow:rgba(0, 0, 0, 0.0745098) 0 1px 1px inset !important; 
-  border-color:#CC0000!important;
-  box-shadow:rgba(0, 0, 0, 0.0745098) 0 1px 1px inset !important;
+	border-color:#CC0000!important;
+	box-shadow:rgba(0, 0, 0, 0.0745098) 0 1px 1px inset !important;
  }
  
 #cke_ProductBodyCopy {margin: 10px 0 20px 0;}

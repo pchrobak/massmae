@@ -13,4 +13,15 @@ class News extends AppModel {
  */
 	public $displayField = 'title';
 
+	//Validate
+	public $validate = array(
+		'title' => array(
+			'rule'    => 'notEmpty',
+			'message' => 'You must enter a title'
+		),
+		'body' => array(
+			'rule'    => 'notEmpty',
+			'message' => 'You must enter text for this news article'
+		)
+	);
 }

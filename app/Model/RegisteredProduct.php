@@ -15,7 +15,25 @@ class RegisteredProduct extends AppModel {
  */
 	public $displayField = 'registered_member_id';
 
-
+//Validate
+	public $validate = array(
+		'registered_member_id' => array(
+			'rule'    => 'notEmpty',
+			'message' => 'You must select a registered member'
+		),
+		'product_id' => array(
+			'rule'    => 'notEmpty',
+			'message' => 'You must select a product'
+		),
+		'serial' => array(
+			'rule'    => 'notEmpty',
+			'message' => 'You must select a serial number'
+		),
+		'dealer_name' => array(
+			'rule'    => 'notEmpty',
+			'message' => 'You must select a dealer name'
+		)
+	);
 	//The Associations below have been created with all possible keys, those that are not needed can be removed
 
 /**

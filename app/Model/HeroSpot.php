@@ -6,6 +6,13 @@ App::uses('AppModel', 'Model');
  */
 class HeroSpot extends AppModel {
 
+	public $validate = array(
+		'title' => array(
+            'rule'    => 'notEmpty',
+            'required' => true,
+            'message'  => 'You must enter a title'
+        ),
+	);
 /**
  * Display field
  *

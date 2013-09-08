@@ -72,7 +72,7 @@ class DealerOnlineLocationsController extends AppController {
 		}
 		$this->DealerOnlineLocation->id = $id;
 		if (!$this->DealerOnlineLocation->exists()) {
-			throw new NotFoundException(__('Invalid dealer online location'));
+			throw new NotFoundException('Invalid dealer online location');
 		}
 		if ($this->DealerOnlineLocation->delete()) {
 			$this->Session->setFlash('You have successfully Deleted an Online Dealer Location!', 'default', array('class' => 'success_message'));

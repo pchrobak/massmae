@@ -14,8 +14,31 @@ class DealerUsLocation extends AppModel {
  */
 	public $displayField = 'company_name';
 
-
-	//The Associations below have been created with all possible keys, those that are not needed can be removed
+//Validate
+	public $validate = array(
+		'company_name' => array(
+			'rule'    => 'notEmpty',
+			'message' => 'You must enter a company name'
+		),
+		'address1' => array(
+			'rule'    => 'email',
+			'message' => 'You must enter an address'
+		),
+		'city' => array(
+			'rule'    => 'notEmpty',
+			'message' => 'You must enter a city'
+		),
+		'state_id' => array(
+			'rule'    => 'notEmpty',
+			'message' => 'You must select a state'
+		),
+		'zip' => array(
+			'rule'    => 'notEmpty',
+			'message' => 'You must enter a zip or postal code'
+		)
+	);
+	
+//The Associations below have been created with all possible keys, those that are not needed can be removed
 
 /**
  * belongsTo associations

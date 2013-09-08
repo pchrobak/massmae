@@ -13,6 +13,30 @@ class DealerOnlineLocation extends AppModel {
  */
 	public $displayField = 'company_name';
 	
+//Validate
+	public $validate = array(
+		'company_name' => array(
+			'rule'    => 'notEmpty',
+			'message' => 'You must enter a company name'
+		),
+		'address' => array(
+			'rule'    => 'email',
+			'message' => 'You must enter an address'
+		),
+		'website' => array(
+			'rule'    => 'url',
+			'message' => 'You must enter a valid url for the website (start with http://)'
+		),
+		'state_id' => array(
+			'rule'    => 'notEmpty',
+			'message' => 'You must select a state'
+		),
+		'zip' => array(
+			'rule'    => 'notEmpty',
+			'message' => 'You must enter a zip or postal code'
+		)
+	);
+	
 	public $actsAs = array(
         'Upload.Upload' => array(
             'logo' => array(

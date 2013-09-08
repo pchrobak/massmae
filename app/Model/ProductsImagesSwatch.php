@@ -32,6 +32,21 @@ class ProductsImagesSwatch extends AppModel {
     );
 	//The Associations below have been created with all possible keys, those that are not needed can be removed
 
+		//Validate
+	public $validate = array(
+		'product_id' => array(
+			'rule'    => 'notEmpty',
+			'message' => 'You must select a product'
+		),
+		'finish_id' => array(
+			'rule'    => 'notEmpty',
+			'message' => 'You must select a finish'
+		),
+		'products_filename' => array(
+			'rule'    => 'notEmpty',
+			'message' => 'You must upload an image'
+		)
+	);
 /**
  * belongsTo associations
  *

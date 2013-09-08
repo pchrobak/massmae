@@ -5,7 +5,7 @@
 		<fieldset>
 			<legend><?php echo __('Add Image'); ?> <button class="btn pull-right"><?php echo $this->Html->link(__('List Images'), array('action' => 'index')); ?></button></legend>
 		<?php
-		echo $this->Form->input('product_id');?>
+		echo $this->Form->input('product_id', array('empty'=>'Select a Product'));?>
 		<div class="input file">
 			<label for="ProductsImageFilename">Filename</label>
 			<input type="file" name="data[ProductsImage][filename]"  id="ProductsImageFilename"/><br>

@@ -1,5 +1,4 @@
-<!-- app/View/Users/add.ctp -->
-<div class="users form">
+<div class="page-content">
 <?php echo $this->Form->create('User'); ?>
     <fieldset>
         <legend><?php echo __('Add User'); ?></legend>
@@ -10,5 +9,6 @@
         ));
     ?>
     </fieldset>
-<?php echo $this->Form->end(__('Submit')); ?>
+ <?php echo $this->Form->submit('Submit', array('class' => 'btn'));
+		echo $this->Form->end();?>
 </div>

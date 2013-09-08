@@ -14,6 +14,18 @@ class Finish extends AppModel {
  */
 	public $displayField = 'name';
 	
+	//Validate
+	public $validate = array(
+		'name' => array(
+			'rule'    => 'notEmpty',
+			'message' => 'Name or finish image cannot be blank'
+		),
+		'filename' => array(
+			'rule'    => 'notEmpty',
+			'message' => 'You must select a file'
+		)
+	);
+	
 	public $actsAs = array(
         'Upload.Upload' => array(
             'filename' => array(

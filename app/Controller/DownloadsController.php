@@ -75,10 +75,10 @@ class DownloadsController extends AppController {
 			throw new NotFoundException(__('Invalid download'));
 		}
 		if ($this->Download->delete()) {
-			$this->Session->setFlash(__('Download was successfully deleted!', 'default', array('class' => 'success_message')));
+			$this->Session->setFlash('Download was successfully deleted!', 'default', array('class' => 'success_message'));
 			$this->redirect(array('action' => 'index'));
 		}
-		$this->Session->setFlash(__('Download was not deleted. Please try again', 'default', array('class' => 'error_message')));
+		$this->Session->setFlash('Download was not deleted. Please try again', 'default', array('class' => 'error_message'));
 		$this->redirect(array('action' => 'index'));
 	}
 }

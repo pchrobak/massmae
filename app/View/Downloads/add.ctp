@@ -25,9 +25,9 @@ function SetFileField( fileUrl )
 		<fieldset>
 			<legend><?php echo __('Add Download'); ?> <button class="btn pull-right"><?php echo $this->Html->link(__('List Downloads'), array('action' => 'index')); ?></button></legend>
 		<?php echo $this->Form->input('display_name', array('class' => 'input-xxlarge'));?>
-		<div class="input text">
+		<div class="input text required">
 		<label for="DownloadFilename">Download file</label>
-			<input id="DownloadFilename" name="data[Download][filename]" type="text" class="input-xlarge">
+			<input id="DownloadFilename" name="data[Download][filename]" type="text" class="input-xlarge" id="DownloadFilename">
 			<input type="button" class="btn" style="margin:0 0 10px 15px;" value="Browse Server" onclick="BrowseServer();" />
 		</div>
 		</fieldset>

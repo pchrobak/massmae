@@ -14,8 +14,31 @@ class CustomerReview extends AppModel {
  */
 	public $displayField = 'title';
 
+	//Validate
+	public $validate = array(
+		'product_id' => array(
+			'rule'    => 'notEmpty',
+			'message' => 'You must select a product'
+		),
+		'email' => array(
+			'rule'    => 'email',
+			'message' => 'You must enter a valid email'
+		),
+		'rating' => array(
+			'rule'    => 'notEmpty',
+			'message' => 'You must select a rating'
+		),
+		'title' => array(
+			'rule'    => 'notEmpty',
+			'message' => 'You must enter a title'
+		),
+		'review' => array(
+			'rule'    => 'notEmpty',
+			'message' => 'You must enter a review'
+		)
+	);
 
-	//The Associations below have been created with all possible keys, those that are not needed can be removed
+//The Associations below have been created with all possible keys, those that are not needed can be removed
 
 /**
  * belongsTo associations

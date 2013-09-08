@@ -30,6 +30,18 @@ class ProductsImage extends AppModel {
             )
         )
     );
+	
+	//Validate
+	public $validate = array(
+		'product_id' => array(
+			'rule'    => 'notEmpty',
+			'message' => 'You must select a product'
+		),
+		'filename' => array(
+			'rule'    => 'notEmpty',
+			'message' => 'You must upload an image'
+		)
+	);
 /**
  * belongsTo associations
  *

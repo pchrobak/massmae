@@ -30,10 +30,10 @@ CKEDITOR.editorConfig = function( config ) {
 	
 	
 	//Set up CKfinder integration
-	config.filebrowserBrowseUrl = '/demo/audioquest/cms/js/ckfinder/ckfinder.html';
-	config.filebrowserImageBrowseUrl = '/demo/audioquest/cms/js/ckfinder/ckfinder.html';
-	config.filebrowserFlashBrowseUrl = '/demo/audioquest/cms/js/ckfinder/ckfinder.html';
-	config.filebrowserUploadUrl = '/demo/audioquest/cms/js/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files';
-	config.filebrowserImageUploadUrl = '/demo/audioquest/cms/js/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Images';
-	config.filebrowserFlashUploadUrl = '/demo/audioquest/cms/js/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Flash';
+	config.filebrowserBrowseUrl = '/basecms/js/ckfinder/ckfinder.html';
+	config.filebrowserImageBrowseUrl = '/basecms/js/ckfinder/ckfinder.html';
+	config.filebrowserFlashBrowseUrl = '/basecms/js/ckfinder/ckfinder.html';
+	config.filebrowserUploadUrl = '/basecms/js/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files';
+	config.filebrowserImageUploadUrl = '/basecms/js/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Images';
+	config.filebrowserFlashUploadUrl = '/basecms/js/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Flash';
 };

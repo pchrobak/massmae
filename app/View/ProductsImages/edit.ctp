@@ -18,7 +18,7 @@
 		<?php echo $this->Form->create('ProductsImage', array('type' => 'file')); ?>
 	<?php
 		echo $this->Form->input('id');
-		echo $this->Form->input('product_id');?>
+		echo $this->Form->input('product_id', array('empty'=>'Select a Product'));?>
 		<div class="input file">
 			<label for="FilenameImage">Image</label><br>
 			<?php echo $this->Html->image('thumbs/small_'.$this->data['ProductsImage']['filename'], array('fullBase' => true, 'vspace'=>'5'));?>

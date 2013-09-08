@@ -26,14 +26,6 @@
 				echo $this->Form->input('name', array('class' => 'input-xxlarge'));
 				echo $this->Form->input('series_id',array('empty' => 'Select a Series'));
 				echo $this->Form->input('Category');
-				echo $this->Form->input('Finish');?>
-				<div class="input file">
-					<label for="ProductProductImage">Product Image</label>
-					<input type="file" name="data[Product][product_image]"  id="ProductProductImage"/><br>
-					<small>Please Ensure image is 800x600</small>
-				</div>
-				<?php
-				echo $this->Form->input('photo_dir', array('type' => 'hidden'));
 				echo $this->Form->input('quick_description', array('class' => 'input-xxlarge'));
 				echo $this->Form->input('body_copy', array('class' => 'ckeditor'));
 				echo $this->Form->input('priced_per', array('class' => 'input-xlarge', 'options'=> array('each'=>'each','pair'=>'pair','system'=>'system'), 'empty'=>'Select Unit of Measure', 'label'=>'Unit Of Measure'));

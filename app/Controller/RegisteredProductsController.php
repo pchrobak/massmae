@@ -66,10 +66,10 @@ class RegisteredProductsController extends AppController {
 		}
 		if ($this->request->is('post') || $this->request->is('put')) {
 			if ($this->RegisteredProduct->save($this->request->data)) {
-				$this->Session->setFlash(__('The registered product has been saved'));
+				$this->Session->setFlash('You have successfully Saved the registered product!', 'default', array('class' => 'success_message'));
 				$this->redirect(array('action' => 'index'));
 			} else {
-				$this->Session->setFlash(__('The registered product could not be saved. Please, try again.'));
+				$this->Session->setFlash('There was an error in saving this form.  Please make sure all require fields are filled in', 'default', array('class' => 'error_message'));
 			}
 		} else {
 			$this->request->data = $this->RegisteredProduct->read(null, $id);
@@ -96,10 +96,10 @@ class RegisteredProductsController extends AppController {
 			throw new NotFoundException(__('Invalid registered product'));
 		}
 		if ($this->RegisteredProduct->delete()) {
-			$this->Session->setFlash(__('Registered product deleted'));
+			$this->Session->setFlash('Registered Product was successfully deleted!', 'default', array('class' => 'success_message'));
 			$this->redirect(array('action' => 'index'));
 		}
-		$this->Session->setFlash(__('Registered product was not deleted'));
+		$this->Session->setFlash('Registered Product was not deleted', 'default', array('class' => 'error_message'));
 		$this->redirect(array('action' => 'index'));
 	}
 }
