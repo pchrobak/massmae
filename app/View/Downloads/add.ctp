@@ -6,7 +6,7 @@ function BrowseServer()
 	// You can use the "CKFinder" class to render CKFinder in a page:
 	var finder = new CKFinder();
 	finder.basePath = '../';	// The path for the installation of CKFinder (default = "/ckfinder/").
-	finder.startupPath = "Files:/downloads/";
+	finder.startupPath = "Files:/";
 	finder.selectActionFunction = SetFileField;
 	finder.popup();
 }
