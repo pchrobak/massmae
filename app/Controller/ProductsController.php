@@ -37,7 +37,9 @@ class ProductsController extends AppController {
 		$series = $this->Product->Series->find('list');
 		$downloads = $this->Product->Download->find('list');
 		$categories = $this->Product->Category->find('list');
-        $parents = $this->Product->find('list');
+        $parents = $this->Product->find('list', array(
+            'conditions'=> array('language_id'=>'1')
+        ));
        	$this->set(compact('series', 'categories', 'downloads', 'finishes', 'parents'));
 	}
 
