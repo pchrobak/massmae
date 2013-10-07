@@ -27,6 +27,10 @@ public $validate = array(
 			'message' => 'Product Name must be at least 3 characters long'
 		)
 	),
+    'language_id' => array (
+        'rule'    => 'notEmpty',
+        'message' => 'You must select a language'
+    ),
 	'series_id' => array (
 		'rule'    => 'notEmpty',
         'message' => 'You must select a series'
@@ -124,22 +128,9 @@ public $validate = array(
 			'finderQuery' => '',
 			'deleteQuery' => '',
 			'insertQuery' => ''
+
 		),
-		'Ingredient' => array(
-			'className' => 'Product',
-			'joinTable' => 'products_products',
-			'foreignKey' => 'product_id',
-			'associationForeignKey' => 'ingredient_id',
-			'unique' => true,
-			'conditions' => '',
-			'fields' => '',
-			'order' => '',
-			'limit' => '',
-			'offset' => '',
-			'finderQuery' => '',
-			'deleteQuery' => '',
-			'insertQuery' => ''
-		),'Article' => array(
+        'Article' => array(
 			'className' => 'Article',
 			'joinTable' => 'products_articles',
 			'foreignKey' => 'product_id',

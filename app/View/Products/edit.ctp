@@ -36,6 +36,8 @@
 				echo $this->Form->input('visible');
 				echo $this->Form->input('featured');
 				echo $this->Form->input('show_price');
+                echo $this->Form->input('language_id', array('options' => array('1' => 'English','2' => 'German','3' => 'French'), 'empty' =>'Select Language'));
+                echo $this->Form->input('parents', array('empty' => 'Select a Parent', 'label'=>'Parent Product (<small>if applicable</small>)'));
 				echo $this->Form->input('name', array('class' => 'input-xxlarge'));
 				echo $this->Form->input('series_id',array('empty' => 'Select a Series'));
 				echo $this->Form->input('Category');
