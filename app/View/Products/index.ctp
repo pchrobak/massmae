@@ -5,8 +5,8 @@
 	<tr>
 			<th><?php echo $this->Paginator->sort('id'); ?></th>
 			<th><?php echo $this->Paginator->sort('name'); ?></th>
+            <th><?php echo $this->Paginator->sort('language_id'); ?></th>
 			<th><?php echo $this->Paginator->sort('msrp_usd'); ?></th>
-			<th><?php echo $this->Paginator->sort('updated'); ?></th>
 			<th><?php echo $this->Paginator->sort('featured'); ?></th>
 			<th><?php echo $this->Paginator->sort('visible'); ?></th>
 			<th class="actions"><?php echo __('Actions'); ?></th>
@@ -16,8 +16,11 @@
 	<tr>
 		<td><?php echo h($product['Product']['id']); ?>&nbsp;</td>
 		<td><?php echo h($product['Product']['name']); ?>&nbsp;</td>
+        <td><?php if($product['Product']['language_id'] == 1){?><img src='img/english.png'>
+            <?php }else if($product['Product']['language_id'] == 2){?><img src='img/french.png'>
+            <?php }else if($product['Product']['language_id'] == 3){?><img src='img/german.png'><?php }?>
+        </td>
 		<td><?php echo '$'.h($product['Product']['msrp_usd']); ?>&nbsp;</td>
-		<td><?php echo h($product['Product']['updated']); ?>&nbsp;</td>
 		<td><?php if($product['Product']['featured'] == 1){?><img src='img/test-pass-icon.png'><?php }else{?><img src='img/test-fail-icon.png'><?php }?></td>
 		<td><?php if($product['Product']['visible'] == 1){?><img src='img/test-pass-icon.png'><?php }else{?><img src='img/test-fail-icon.png'><?php }?></td>
 		<td class="actions">
