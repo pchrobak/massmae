@@ -4,6 +4,7 @@
 	<table cellpadding="0" cellspacing="0" class="table table-bordered table-striped">
 	<tr>
 			<th><?php echo $this->Paginator->sort('id'); ?></th>
+            <th><?php echo $this->Paginator->sort('language'); ?></th>
 			<th><?php echo $this->Paginator->sort('display_name'); ?></th>
 			<th><?php echo $this->Paginator->sort('filename'); ?></th>
 			<th><?php echo $this->Paginator->sort('modified'); ?></th>
