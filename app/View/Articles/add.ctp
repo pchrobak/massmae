@@ -12,6 +12,8 @@
 
 		echo $this->Form->input('id');
 		echo $this->Form->input('visible');
+        echo $this->Form->input('language_id', array('options' => array('1' => 'English','2' => 'French','3' => 'German'), 'empty' =>'Select Language', 'label'=>'Language'));
+        echo $this->Form->input('parents', array('empty' => 'Select a Parent', 'label'=>'Parent Article (<small>if applicable</small>)'));
 		echo $this->Form->input('Product', array('label'=>'Select Products Article is Associated to'));
 		echo $this->Form->input('title', array('class' => 'input-xxlarge'));
 		echo $this->Form->input('body', array('class' => 'ckeditor'));

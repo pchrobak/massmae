@@ -4,6 +4,7 @@
 	<table cellpadding="0" cellspacing="0" class="table table-bordered table-striped">
 	<tr>
 			<th><?php echo $this->Paginator->sort('id'); ?></th>
+            <th><?php echo $this->Paginator->sort('language_id'); ?></th>
 			<th><?php echo $this->Paginator->sort('name'); ?></th>
 			<th><?php echo $this->Paginator->sort('created'); ?></th>
 			<th class="actions"><?php echo __('Actions'); ?></th>
@@ -12,6 +13,10 @@
 	foreach ($finishes as $finish): ?>
 	<tr>
 		<td><?php echo h($finish['Finish']['id']); ?>&nbsp;</td>
+        <td><?php if($finish['Finish']['language_id'] == 1){?><img src='img/english.png'>
+            <?php }else if($finish['Finish']['language_id'] == 2){?><img src='img/french.png'>
+            <?php }else if($finish['Finish']['language_id'] == 3){?><img src='img/german.png'><?php }?>
+        </td>
 		<td><?php echo h($finish['Finish']['name']); ?>&nbsp;</td>
 		<td><?php echo h($finish['Finish']['created']); ?>&nbsp;</td>
 		<td class="actions">

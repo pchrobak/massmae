@@ -33,8 +33,10 @@ class ProductsImagesSwatchesController extends AppController {
 			}
 		}
 		$products = $this->ProductsImagesSwatch->Product->find('list');
-		$finishes = $this->ProductsImagesSwatch->Finish->find('list');
-		$this->set(compact('products', 'finishes'));
+		$finishes = $this->ProductsImagesSwatch->Finish->find('list', array(
+            'conditions'=> array('language_id'=>'1')
+        ));
+		$this->set(compact('products', 'finishes', 'parents'));
 	}
 
 /**
@@ -60,8 +62,6 @@ class ProductsImagesSwatchesController extends AppController {
 			$this->request->data = $this->ProductsImagesSwatch->read(null, $id);
 		}
 		$products = $this->ProductsImagesSwatch->Product->find('list');
-		$finishes = $this->ProductsImagesSwatch->Finish->find('list');
-		$this->set(compact('products', 'finishes'));
 	}
 
 /**

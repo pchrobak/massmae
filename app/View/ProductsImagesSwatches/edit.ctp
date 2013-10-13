@@ -27,7 +27,9 @@
 			<small>Please Ensure image is 800x600</small>
 		</div><?php
 		echo $this->Form->input('photo_dir', array('type' => 'hidden'));
-		echo $this->Form->input('alt_text');?>
+        echo $this->Form->input('alt_text_1', array('label' =>'Alt Text'));
+        echo $this->Form->input('alt_text_2', array('label' =>'Alt Text French'));
+        echo $this->Form->input('alt_text_3', array('label' =>'Alt Text German'));?>
 		<?php echo $this->Form->submit('Submit', array('class' => 'btn'));
 		echo $this->Form->end();?>
 	

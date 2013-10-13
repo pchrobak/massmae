@@ -7,6 +7,10 @@ App::uses('AppModel', 'Model');
 class HeroSpot extends AppModel {
 
 	public $validate = array(
+        'language_id' => array (
+            'rule'    => 'notEmpty',
+            'message' => 'You must select a language'
+        ),
 		'title' => array(
             'rule'    => 'notEmpty',
             'required' => true,

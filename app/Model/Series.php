@@ -30,6 +30,10 @@ class Series extends AppModel {
     );
 	
 	public $validate = array(
+        'language_id' => array (
+            'rule'    => 'notEmpty',
+            'message' => 'You must select a language'
+        ),
 		'series_name' => array(
             'rule'    => 'notEmpty',
 			'message' => 'Series Name cannot be blank'

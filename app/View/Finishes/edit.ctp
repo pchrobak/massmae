@@ -22,6 +22,8 @@
 		<?php echo $this->Form->create('Finish', array('type' => 'file')); ?>
 	<?php
 		echo $this->Form->input('id');
+        echo $this->Form->input('language_id', array('options' => array('1' => 'English','2' => 'French','3' => 'German'), 'empty' =>'Select Language', 'label'=>'Language'));
+        echo $this->Form->input('parents', array('empty' => 'Select a Parent', 'label'=>'Parent Finish (<small>if applicable</small>)'));
 		echo $this->Form->input('name', array('class'=>'input-xxlarge'));?>
 		<div class="input file">
 			<label for="FinishImage">Finish Image</label><br>

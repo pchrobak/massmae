@@ -10,6 +10,8 @@
 	<?php
 		echo $this->Form->input('visible');
 		echo $this->Form->input('show_in_footer');
+        echo $this->Form->input('language_id', array('options' => array('1' => 'English','2' => 'French','3' => 'German'), 'empty' =>'Select Language'));
+        echo $this->Form->input('parents', array('empty' => 'Select a Parent', 'label'=>'Parent Category (<small>if applicable</small>)'));
 		echo $this->Form->input('subcategory', array('type'=>'select', 'options' => $subcat, 'empty' => 'Select subcategory if applicable','class' => 'input-xlarge'));
 		echo $this->Form->input('name', array('class' => 'input-xxlarge'));
 		echo $this->Form->input('overview_image', array('type' => 'file'));

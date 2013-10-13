@@ -5,6 +5,7 @@
 	<table cellpadding="0" cellspacing="0" class="table table-bordered table-striped">
 	<tr>
 			<th><?php echo $this->Paginator->sort('tile'); ?></th>
+            <th><?php echo $this->Paginator->sort('language_id'); ?></th>
 			<th><?php echo $this->Paginator->sort('visible'); ?></th>
 			<th><?php echo $this->Paginator->sort('modified'); ?></th>
 			<th class="actions"><?php echo __('Actions'); ?></th>
@@ -13,6 +14,10 @@
 	foreach ($sitePages as $sitePage): ?>
 	<tr>
 		<td><?php echo h($sitePage['SitePage']['title']); ?>&nbsp;</td>
+        <td><?php if($sitePage['SitePage']['language_id'] == 1){?><img src='img/english.png'>
+            <?php }else if($sitePage['SitePage']['language_id'] == 2){?><img src='img/french.png'>
+            <?php }else if($sitePage['SitePage']['language_id'] == 3){?><img src='img/german.png'><?php }?>
+        </td>
 		<td><?php if($sitePage['SitePage']['visible'] == 1){?><img src='img/test-pass-icon.png'><?php }else{?><img src='img/test-fail-icon.png'><?php }?></td>
 		<td><?php echo h($sitePage['SitePage']['modified']); ?>&nbsp;</td>
 		<td class="actions">

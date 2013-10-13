@@ -35,7 +35,11 @@ class FaqsController extends AppController {
 			}
 		}
 		$products = $this->Faq->Product->find('list');
-		$this->set(compact('products'));
+        $parents = $this->Faq->find('list', array(
+            'conditions'=> array('language_id'=>'1'),
+            'fields'=> array('question')
+        ));
+		$this->set(compact('products','parents'));
 	}
 
 /**
@@ -63,7 +67,11 @@ class FaqsController extends AppController {
 			$this->request->data = $this->Faq->read(null, $id);
 		}
 		$products = $this->Faq->Product->find('list');
-		$this->set(compact('products'));
+        $parents = $this->Faq->find('list', array(
+            'conditions'=> array('language_id'=>'1'),
+            'fields'=> array('question')
+        ));
+        $this->set(compact('products','parents'));
 	}
 
 /**

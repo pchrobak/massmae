@@ -15,6 +15,10 @@ class Article extends AppModel {
 	
 	//Validate
 	public $validate = array(
+        'language_id' => array (
+            'rule'    => 'notEmpty',
+            'message' => 'You must select a language'
+        ),
 		'title' => array(
 			'rule'    => 'notEmpty',
 			'message' => 'You must enter a title'

@@ -14,6 +14,10 @@
 	foreach ($downloads as $download): ?>
 	<tr>
 		<td><?php echo h($download['Download']['id']); ?>&nbsp;</td>
+        <td><?php if($download['Download']['language_id'] == 1){?><img src='img/english.png'>
+            <?php }else if($download['Download']['language_id'] == 2){?><img src='img/french.png'>
+            <?php }else if($download['Download']['language_id'] == 3){?><img src='img/german.png'><?php }?>
+        </td>
 		<td><?php echo h($download['Download']['display_name']); ?>&nbsp;</td>
 		<td><?php echo h($download['Download']['filename']); ?>&nbsp;</td>
 		<td><?php echo h($download['Download']['modified']); ?>&nbsp;</td>

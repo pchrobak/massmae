@@ -35,7 +35,10 @@ class ArticlesController extends AppController {
 			}
 		}
 		$products = $this->Article->Product->find('list');
-		$this->set(compact('products'));
+        $parents = $this->Article->find('list', array(
+            'conditions'=> array('language_id'=>'1')
+        ));
+		$this->set(compact('products', 'parents'));
 	}
 
 /**
@@ -62,7 +65,10 @@ class ArticlesController extends AppController {
 			$this->request->data = $this->Article->read(null, $id);
 		}
 		$products = $this->Article->Product->find('list');
-		$this->set(compact('products'));
+        $parents = $this->Article->find('list', array(
+            'conditions'=> array('language_id'=>'1')
+        ));
+        $this->set(compact('products', 'parents'));
 	}
 
 /**

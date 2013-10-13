@@ -14,6 +14,10 @@ class SitePage extends AppModel {
 	public $displayField = 'title';
 	
 	public $validate = array(
+        'language_id' => array (
+            'rule'    => 'notEmpty',
+            'message' => 'You must select a language'
+        ),
 		'title' => array(
             'rule'    => 'notEmpty',
             'required' => true,

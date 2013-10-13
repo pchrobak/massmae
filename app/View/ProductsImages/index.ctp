@@ -6,9 +6,7 @@
 	<tr>
 			<th><?php echo $this->Paginator->sort('id'); ?></th>
 			<th><?php echo $this->Paginator->sort('filename'); ?></th>
-			<th><?php echo $this->Paginator->sort('alt_description'); ?></th>
-			<th><?php echo $this->Paginator->sort('updated'); ?></th>
-			<th><?php echo $this->Paginator->sort('created'); ?></th>
+			<th><?php echo $this->Paginator->sort('updated'); ?></td>
 			<th class="actions"><?php echo __('Actions'); ?></th>
 	</tr>
 	<?php
@@ -16,9 +14,7 @@
 	<tr>
 		<td><?php echo h($productsImage['ProductsImage']['id']); ?>&nbsp;</td>
 		<td><?php echo h($productsImage['ProductsImage']['filename']); ?>&nbsp;</td>
-		<td><?php echo h($productsImage['ProductsImage']['alt_description']); ?>&nbsp;</td>
 		<td><?php echo h($productsImage['ProductsImage']['updated']); ?>&nbsp;</td>
-		<td><?php echo h($productsImage['ProductsImage']['created']); ?>&nbsp;</td>
 		<td class="actions">
 			<?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $productsImage['ProductsImage']['id'])); ?> | 
 			<?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $productsImage['ProductsImage']['id']), null, __('Are you sure you want to delete # %s?', $productsImage['ProductsImage']['id'])); ?>

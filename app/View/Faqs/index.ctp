@@ -4,6 +4,7 @@
 	<table cellpadding="0" cellspacing="0" class="table table-bordered table-striped">
 	<tr>
 			<th><?php echo $this->Paginator->sort('id'); ?></th>
+            <th><?php echo $this->Paginator->sort('language_id'); ?></th>
 			<th><?php echo $this->Paginator->sort('visible'); ?></th>
 			<th><?php echo $this->Paginator->sort('question'); ?></th>
 			<th><?php echo $this->Paginator->sort('created'); ?></th>
@@ -13,6 +14,10 @@
 	foreach ($faqs as $faq): ?>
 	<tr>
 		<td><?php echo h($faq['Faq']['id']); ?>&nbsp;</td>
+        <td><?php if($faq['Faq']['language_id'] == 1){?><img src='img/english.png'>
+            <?php }else if($faq['Faq']['language_id'] == 2){?><img src='img/french.png'>
+            <?php }else if($faq['Faq']['language_id'] == 3){?><img src='img/german.png'><?php }?>
+        </td>
 		<td><?php if($faq['Faq']['visible'] == 1){?><img src='img/test-pass-icon.png'><?php }else{?><img src='img/test-fail-icon.png'><?php }?></td>
 		<td><?php echo h($faq['Faq']['question']); ?>&nbsp;</td>
 		<td><?php echo h($faq['Faq']['created']); ?>&nbsp;</td>

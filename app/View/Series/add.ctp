@@ -9,6 +9,8 @@
 			<legend><?php echo __('Add Series'); ?> <button class="btn pull-right"><?php echo $this->Html->link(__('List Series'), array('action' => 'index')); ?></button></legend>
 		<?php
 			echo $this->Form->input('visible');
+            echo $this->Form->input('language_id', array('options' => array('1' => 'English','2' => 'French','3' => 'German'), 'empty' =>'Select Language'));
+            echo $this->Form->input('parents', array('empty' => 'Select a Parent', 'label'=>'Parent Series (<small>if applicable</small>)'));
 			echo $this->Form->input('series_name', array('class' => 'input-xxlarge'));
 			echo $this->Form->input('overview', array('class' => 'ckeditor'));
 			echo $this->Form->input('series_image', array('type' => 'file'));

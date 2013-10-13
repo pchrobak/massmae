@@ -9,6 +9,7 @@
 			<legend><?php echo __('Add Spot'); ?> <button class="btn pull-right"><?php echo $this->Html->link(__('List Spots'), array('action' => 'index')); ?></button></legend>
 		<?php
 		echo $this->Form->input('visible');
+        echo $this->Form->input('language_id', array('options' => array('1' => 'English','2' => 'French','3' => 'German'), 'empty' =>'Select Language', 'label'=>'Language'));
 		echo $this->Form->input('sort');
 		echo $this->Form->input('title', array('class'=>'input-xxlarge'));
 		?>	

@@ -8,6 +8,8 @@
 		<fieldset>
 			<legend><?php echo __('Add a Finish'); ?> <button class="btn pull-right"><?php echo $this->Html->link(__('List Finishes'), array('action' => 'index')); ?></button></legend>
 		<?php
+        echo $this->Form->input('language_id', array('options' => array('1' => 'English','2' => 'French','3' => 'German'), 'empty' =>'Select Language', 'label'=>'Language'));
+        echo $this->Form->input('parents', array('empty' => 'Select a Parent', 'label'=>'Parent Finish (<small>if applicable</small>)'));
 		echo $this->Form->input('name', array('class'=>'input-xxlarge'));?>
 		<div class="input file">
 			<label for="FinishFilename">Finish Image</label>

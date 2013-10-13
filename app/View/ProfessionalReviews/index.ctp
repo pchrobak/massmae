@@ -4,6 +4,7 @@
 	<table cellpadding="0" cellspacing="0" class="table table-bordered table-striped">
 	<tr>
 			<th><?php echo $this->Paginator->sort('id'); ?></th>
+            <th><?php echo $this->Paginator->sort('language_id'); ?></th>
 			<th><?php echo $this->Paginator->sort('visible'); ?></th>
 			<th><?php echo $this->Paginator->sort('product_id'); ?></th>
 			<th><?php echo $this->Paginator->sort('publication'); ?></th>
@@ -14,6 +15,10 @@
 	foreach ($professionalReviews as $professionalReview): ?>
 	<tr>
 		<td><?php echo h($professionalReview['ProfessionalReview']['id']); ?>&nbsp;</td>
+        <td><?php if($professionalReview['ProfessionalReview']['language_id'] == 1){?><img src='img/english.png'>
+            <?php }else if($professionalReview['ProfessionalReview']['language_id'] == 2){?><img src='img/french.png'>
+            <?php }else if($professionalReview['ProfessionalReview']['language_id'] == 3){?><img src='img/german.png'><?php }?>
+        </td>
 		<td><?php if($professionalReview['ProfessionalReview']['visible'] == 1){?><img src='img/test-pass-icon.png'><?php }else{?><img src='img/test-fail-icon.png'><?php }?></td>
 		<td>
 			<?php echo $this->Html->link($professionalReview['Product']['name'], array('controller' => 'products', 'action' => 'view', $professionalReview['Product']['id'])); ?>

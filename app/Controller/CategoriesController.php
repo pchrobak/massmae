@@ -38,6 +38,10 @@ class CategoriesController extends AppController {
 				$this->Session->setFlash('There was an error in saving this form.  Please make sure all require fields are filled in', 'default', array('class' => 'error_message'));
 			}
 		}
+        $parents = $this->Category->find('list', array(
+            'conditions'=> array('language_id'=>'1')
+        ));
+        $this->set(compact('parents'));
 	}
 
 /**
@@ -68,6 +72,10 @@ class CategoriesController extends AppController {
 		} else {
 			$this->request->data = $this->Category->read(null, $id);
 		}
+        $parents = $this->Category->find('list', array(
+            'conditions'=> array('language_id'=>'1')
+        ));
+        $this->set(compact('parents'));
 	}
 
 /**

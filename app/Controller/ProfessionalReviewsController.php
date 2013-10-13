@@ -34,7 +34,11 @@ class ProfessionalReviewsController extends AppController {
 			}
 		}
 		$products = $this->ProfessionalReview->Product->find('list');
-		$this->set(compact('products'));
+        $parents = $this->ProfessionalReview->find('list', array(
+            'conditions'=> array('language_id'=>'1'),
+            'fields' => array('review_title')
+        ));
+		$this->set(compact('products','parents'));
 	}
 
 /**
@@ -60,7 +64,12 @@ class ProfessionalReviewsController extends AppController {
 			$this->request->data = $this->ProfessionalReview->read(null, $id);
 		}
 		$products = $this->ProfessionalReview->Product->find('list');
-		$this->set(compact('products'));
+        $parents = $this->ProfessionalReview->find('list', array(
+            'conditions'=> array('language_id'=>'1'),
+            'fields' => array('review_title')
+        ));
+       // var_dump($parents);exit();
+        $this->set(compact('products','parents'));
 	}
 
 /**

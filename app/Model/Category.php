@@ -30,6 +30,10 @@ class Category extends AppModel {
     );
 	
 	public $validate = array(
+        'language_id' => array (
+            'rule'    => 'notEmpty',
+            'message' => 'You must select a language'
+        ),
 		'name' => array(
             'rule'    => 'notEmpty',
             'required' => true,

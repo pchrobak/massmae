@@ -19,6 +19,10 @@ class Download extends AppModel {
  * @var array
  */
 	public $validate = array(
+        'language_id' => array (
+            'rule'    => 'notEmpty',
+            'message' => 'You must select a language'
+        ),
 		'display_name' => array(
 			'rule'    => 'notEmpty',
 			'message' => 'Display name cannot be blank'

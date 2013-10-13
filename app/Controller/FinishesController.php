@@ -32,6 +32,10 @@ class FinishesController extends AppController {
 				$this->Session->setFlash('There was an error in saving this form.  Please make sure all require fields are filled in', 'default', array('class' => 'error_message'));
 			}
 		}
+        $parents = $this->Finish->find('list', array(
+            'conditions'=> array('language_id'=>'1')
+        ));
+        $this->set(compact('parents'));
 	}
 
 /**
@@ -56,6 +60,10 @@ class FinishesController extends AppController {
 		} else {
 			$this->request->data = $this->Finish->read(null, $id);
 		}
+        $parents = $this->Finish->find('list', array(
+            'conditions'=> array('language_id'=>'1')
+        ));
+        $this->set(compact('parents'));
 	}
 
 /**

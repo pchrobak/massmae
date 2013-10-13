@@ -16,6 +16,10 @@ class ProfessionalReview extends AppModel {
 
 //Validate
 	public $validate = array(
+        'language_id' => array (
+            'rule'    => 'notEmpty',
+            'message' => 'You must select a language'
+        ),
 		'product_id' => array(
 			'rule'    => 'notEmpty',
 			'message' => 'You must select a product'

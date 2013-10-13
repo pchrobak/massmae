@@ -16,6 +16,10 @@ class Faq extends AppModel {
 	
 	//Validate
 	public $validate = array(
+        'language_id' => array (
+            'rule'    => 'notEmpty',
+            'message' => 'You must select a language'
+        ),
 		'question' => array(
 			'rule'    => 'notEmpty',
 			'message' => 'You must enter a question'
