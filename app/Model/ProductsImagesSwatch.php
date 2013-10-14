@@ -41,10 +41,6 @@ class ProductsImagesSwatch extends AppModel {
 		'finish_id' => array(
 			'rule'    => 'notEmpty',
 			'message' => 'You must select a finish'
-		),
-		'products_filename' => array(
-			'rule'    => 'notEmpty',
-			'message' => 'You must upload an image'
 		)
 	);
 /**

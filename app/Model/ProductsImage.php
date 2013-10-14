@@ -36,10 +36,6 @@ class ProductsImage extends AppModel {
 		'product_id' => array(
 			'rule'    => 'notEmpty',
 			'message' => 'You must select a product'
-		),
-		'filename' => array(
-			'rule'    => 'notEmpty',
-			'message' => 'You must upload an image'
 		)
 	);
 /**
