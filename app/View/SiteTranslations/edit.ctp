@@ -7,9 +7,9 @@
 		<legend><?php echo __('Edit Site Translation'); ?></legend>
 	<?php
 		echo $this->Form->input('id');
-		echo $this->Form->input('phrase_1');
-		echo $this->Form->input('phrase_2');
-		echo $this->Form->input('phrase_3');
+        echo $this->Form->input('phrase_1', array('label'=>'Phrase'));
+        echo $this->Form->input('phrase_2', array('label'=>'French'));
+        echo $this->Form->input('phrase_3', array('label'=>'German'));
 	?>
 	</fieldset>
     <?php echo $this->Form->submit('Submit', array('class' => 'btn'));
