@@ -61,7 +61,11 @@ class ProductsImagesSwatchesController extends AppController {
 		} else {
 			$this->request->data = $this->ProductsImagesSwatch->read(null, $id);
 		}
-		$products = $this->ProductsImagesSwatch->Product->find('list');
+        $products = $this->ProductsImagesSwatch->Product->find('list');
+        $finishes = $this->ProductsImagesSwatch->Finish->find('list', array(
+            'conditions'=> array('language_id'=>'1')
+        ));
+        $this->set(compact('products', 'finishes', 'parents'));
 	}
 
 /**
