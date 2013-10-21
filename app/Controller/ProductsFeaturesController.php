@@ -41,13 +41,15 @@ class ProductsFeaturesController extends AppController {
 		if ($this->request->is('post')) {
 			$this->ProductsFeature->create();
 			if ($this->ProductsFeature->save($this->request->data)) {
-				$this->Session->setFlash(__('The products feature has been saved'));
-				$this->redirect(array('action' => 'index'));
-			} else {
-				$this->Session->setFlash(__('The products feature could not be saved. Please, try again.'));
-			}
-		}
-		$products = $this->ProductsFeature->Product->find('list');
+                $this->Session->setFlash('You have successfully Saved a product feature!', 'default', array('class' => 'success_message'));
+                $this->redirect(array('action' => 'index'));
+            } else {
+                $this->Session->setFlash('There was an error in saving this form.  Please make sure all require fields are filled in', 'default', array('class' => 'error_message'));
+            }
+        }
+		$products = $this->ProductsFeature->Product->find('list', array(
+            'conditions'=> array('language_id'=>'1')
+        ));
 		$this->set(compact('products'));
 	}
 
@@ -65,15 +67,17 @@ class ProductsFeaturesController extends AppController {
 		}
 		if ($this->request->is('post') || $this->request->is('put')) {
 			if ($this->ProductsFeature->save($this->request->data)) {
-				$this->Session->setFlash(__('The products feature has been saved'));
-				$this->redirect(array('action' => 'index'));
-			} else {
-				$this->Session->setFlash(__('The products feature could not be saved. Please, try again.'));
-			}
+                $this->Session->setFlash('You have successfully Saved a Product Feature!', 'default', array('class' => 'success_message'));
+                $this->redirect(array('action' => 'index'));
+            } else {
+                $this->Session->setFlash('There was an error in saving this form.  Please make sure all require fields are filled in', 'default', array('class' => 'error_message'));
+            }
 		} else {
 			$this->request->data = $this->ProductsFeature->read(null, $id);
 		}
-		$products = $this->ProductsFeature->Product->find('list');
+        $products = $this->ProductsFeature->Product->find('list', array(
+            'conditions'=> array('language_id'=>'1')
+        ));
 		$this->set(compact('products'));
 	}
 
@@ -94,10 +98,10 @@ class ProductsFeaturesController extends AppController {
 			throw new NotFoundException(__('Invalid products feature'));
 		}
 		if ($this->ProductsFeature->delete()) {
-			$this->Session->setFlash(__('Products feature deleted'));
-			$this->redirect(array('action' => 'index'));
-		}
-		$this->Session->setFlash(__('Products feature was not deleted'));
-		$this->redirect(array('action' => 'index'));
+            $this->Session->setFlash('A Product Feature was successfully deleted!', 'default', array('class' => 'success_message'));
+            $this->redirect(array('action' => 'index'));
+        }
+        $this->Session->setFlash('Sorry, there was an error, A feature was not deleted', 'default', array('class' => 'error_message'));
+        $this->redirect(array('action' => 'index'));
 	}
 }
