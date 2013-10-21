@@ -34,6 +34,7 @@
 			<small>Please Ensure image is 960x500</small>
 		</div><?php
 		echo $this->Form->input('photo_dir', array('type' => 'hidden'));
+        echo $this->Form->input('link_name', array('class'=>'input-xxlarge'));
 		echo $this->Form->input('link', array('class'=>'input-xxlarge'));
 	    echo $this->Form->submit('Submit', array('class' => 'btn'));
 		echo $this->Form->end();?>
