@@ -43,6 +43,7 @@
 				echo $this->Form->input('Category');
 				echo $this->Form->input('quick_description', array('class' => 'input-xxlarge'));
 				echo $this->Form->input('body_copy', array('class' => 'ckeditor'));
+                echo $this->Form->input('compatibility', array('class' => 'ckeditor'));
 				echo $this->Form->input('priced_per', array('class' => 'input-xlarge', 'options'=> array('each'=>'each','pair'=>'pair','system'=>'system'), 'empty'=>'Select Unit of Measure', 'label'=>'Unit Of Measure'));
 				echo $this->Form->input('msrp_usd', array('class' => 'input-xlarge'));
 				echo $this->Form->input('meta_keywords', array('class' => 'input-xxlarge'));
