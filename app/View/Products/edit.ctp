@@ -54,15 +54,15 @@
 			</fieldset>
 		</div>
 		
-		<!--CONTENT FOR PRODUCT IMAGES-->
+	<!--CONTENT FOR PRODUCT IMAGES-->
 		<div class="tab-pane" id="product-images">
 			<h4>Product Images<small>(<?php echo $this->Html->link('Add more product images', array('controller' => 'products_images_swatches', 'action' => 'add')); ?>)</small></h4>
 			<?php foreach ($this->data["ProductsImagesSwatch"] as $prodimage){
-				echo $this->Html->image('thumbs/thumb_'.$prodimage['products_filename'], array('fullBase' => true, 'vspace' => '5'));	
+				echo $this->Html->image('http://massfidelity.cemarketingpros.com/media/products/thumbs/thumb_'.$prodimage['products_filename'], array('fullBase' => true, 'vspace' => '5'));	
 			}?>
 			<h4>Gallery Images<small>(<?php echo $this->Html->link('Add more gallery images', array('controller' => 'products_images', 'action' => 'add')); ?>)</small></h4>
 			<?php foreach ($this->data["ProductsImage"] as $prodgalleryimage){
-				echo $this->Html->image('thumbs/small_'.$prodgalleryimage['filename'], array('fullBase' => true, 'vspace' => '5'));	
+				echo $this->Html->image('http://massfidelity.cemarketingpros.com/media/products/thumbs/small_'.$prodgalleryimage['filename'], array('fullBase' => true, 'vspace' => '5'));	
 			}?>
 		</div>
 		
