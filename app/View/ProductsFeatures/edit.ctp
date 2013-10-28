@@ -35,6 +35,7 @@
         </div>
         <?php
         echo $this->Form->input('position', array('options' => array('left' => 'Left','right' => 'Right'), 'empty' =>'Select Position'));
+        echo $this->Form->input('link_text', array('class' => 'input-xlarge'));
         echo $this->Form->input('link', array('class' => 'input-xlarge'));
         echo $this->Form->input('sort');
         ?>
