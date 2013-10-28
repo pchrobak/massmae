@@ -16,7 +16,7 @@
 		<div class="input file">
 			<label for="HeroSpotHeroImage">Hero Image</label>
 			<input type="file" name="data[HeroSpot][hero_image]"  id="HeroSpotHeroImage"/><br>
-			<small>Please Ensure image is 960x500</small>
+			<small>Please Ensure image is 1150x575</small>
 		</div>
 		
 		<?php
