@@ -29,7 +29,7 @@
 		echo $this->Form->input('title', array('class'=>'input-xxlarge'));?>
 		<div class="input file">
 			<label for="HeroSpotHeroImage">Hero Image</label><br>
-			<?php echo $this->Html->image('thumbs/thumb_'.$this->data['HeroSpot']['hero_image'], array('fullBase' => true, 'vspace'=>'5'));?><br>
+			<?php echo $this->Html->image(SITEURL.'products/thumbs/thumb_'.$this->data['HeroSpot']['hero_image'], array('fullBase' => true, 'vspace'=>'5'));?><br>
 			<input type="file" name="data[HeroSpot][hero_image]" value="data[HeroSpot][hero_image]" id="HeroSpotHeroImage"/><br>
 			<small>Please Ensure image is 1150x575</small>
 		</div><?php

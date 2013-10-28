@@ -183,4 +183,5 @@ CakeLog::config('error', array(
 
 //Site constants
 define("PRODUCTPREVIEWURL", "http://cemarketingpros.com/demo/cecompany/products/?prod_name=");
+define("SITEURL", "http://massfidelity.cemarketingpros.com/");
 define("LISTURL", "/products");
