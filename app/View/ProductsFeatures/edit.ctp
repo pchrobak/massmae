@@ -21,7 +21,7 @@
 <div class="page-content">
 <?php echo $this->Form->create('ProductsFeature'); ?>
 	<fieldset>
-		<legend><?php echo __('Edit Products Feature'); ?></legend>
+		<legend><?php echo __('Edit Product Overview'); ?></legend>
 	<?php
     echo $this->Form->input('visible');
     echo $this->Form->input('product_id', array('empty' =>'Select Product'));
