@@ -14,7 +14,7 @@
 	<tr>
 		<td><?php echo h($productsFeat['ProductsFeat']['id']); ?>&nbsp;</td>
 		<td>
-			<?php echo $this->Html->link($productsFeat['ProductFeature']['title'], array('controller' => 'product_features', 'action' => 'edit', $productsFeat['ProductFeature']['id'])); ?>
+			<?php echo $this->Html->link($productsFeat['ProductFeature']['title'], array('controller' => 'products_features', 'action' => 'edit', $productsFeat['ProductFeature']['id'])); ?>
 		</td>
         <td><?php if($productsFeat['ProductFeature']['visible'] == 1){?><img src='img/test-pass-icon.png'><?php }else{?><img src='img/test-fail-icon.png'><?php }?></td>
         <td><?php if($productsFeat['ProductsFeat']['language_id'] == 1){?><img src='img/english.png'>
