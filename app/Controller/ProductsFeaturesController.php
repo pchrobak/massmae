@@ -41,7 +41,7 @@ class ProductsFeaturesController extends AppController {
 		if ($this->request->is('post')) {
 			$this->ProductsFeature->create();
 			if ($this->ProductsFeature->save($this->request->data)) {
-                $this->Session->setFlash('You have successfully Saved a product feature!', 'default', array('class' => 'success_message'));
+                $this->Session->setFlash('You have successfully Saved a product overview!', 'default', array('class' => 'success_message'));
                 $this->redirect(array('action' => 'index'));
             } else {
                 $this->Session->setFlash('There was an error in saving this form.  Please make sure all require fields are filled in', 'default', array('class' => 'error_message'));
@@ -67,7 +67,7 @@ class ProductsFeaturesController extends AppController {
 		}
 		if ($this->request->is('post') || $this->request->is('put')) {
 			if ($this->ProductsFeature->save($this->request->data)) {
-                $this->Session->setFlash('You have successfully Saved a Product Feature!', 'default', array('class' => 'success_message'));
+                $this->Session->setFlash('You have successfully Saved a Product Overview!', 'default', array('class' => 'success_message'));
                 $this->redirect(array('action' => 'index'));
             } else {
                 $this->Session->setFlash('There was an error in saving this form.  Please make sure all require fields are filled in', 'default', array('class' => 'error_message'));
@@ -98,7 +98,7 @@ class ProductsFeaturesController extends AppController {
 			throw new NotFoundException(__('Invalid products feature'));
 		}
 		if ($this->ProductsFeature->delete()) {
-            $this->Session->setFlash('A Product Feature was successfully deleted!', 'default', array('class' => 'success_message'));
+            $this->Session->setFlash('A Product Overview was successfully deleted!', 'default', array('class' => 'success_message'));
             $this->redirect(array('action' => 'index'));
         }
         $this->Session->setFlash('Sorry, there was an error, A feature was not deleted', 'default', array('class' => 'error_message'));
