@@ -10,6 +10,7 @@
 		echo $this->Form->input('serial');
 		echo $this->Form->input('purchase_date');
 		echo $this->Form->input('dealer_name');
+        echo $this->Form->input('comments', array('class' => 'input-xxlarge'))
 	?>
 	</fieldset>
 	  <?php echo $this->Form->submit('Submit', array('class' => 'btn'));

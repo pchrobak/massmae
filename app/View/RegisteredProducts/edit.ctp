@@ -23,8 +23,8 @@
 		echo $this->Form->input('serial');
 		echo $this->Form->input('purchase_date');
 		echo $this->Form->input('dealer_name');
-	?>
-	    <?php echo $this->Form->submit('Submit', array('class' => 'btn'));
+        echo $this->Form->input('comments', array('class' => 'input-xxlarge'));
+	    echo $this->Form->submit('Submit', array('class' => 'btn'));
 		echo $this->Form->end();?>
 	
 	</fieldset>
