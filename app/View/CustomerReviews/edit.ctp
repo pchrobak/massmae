@@ -24,6 +24,7 @@
 		echo $this->Form->input('id');
 		echo $this->Form->input('validated');
 		echo $this->Form->input('visible');
+        echo $this->Form->input('featured');
 		echo $this->Form->input('product_id', array('class'=>'input-xlarge','empty'=>'Select a Product'));
 		echo $this->Form->input('email', array('class'=>'input-xxlarge'));
 		echo $this->Form->input('rating', array('class' => 'input-xlarge', 'options'=> array('1'=>'1','2'=>'2','3'=>'3','4'=>'4','5'=>'5'), 'empty'=>'Select a Rating'));
