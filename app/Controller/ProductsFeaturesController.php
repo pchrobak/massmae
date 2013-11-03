@@ -50,6 +50,8 @@ class ProductsFeaturesController extends AppController {
 		$products = $this->ProductsFeature->Product->find('list', array(
             'conditions'=> array('language_id'=>'1')
         ));
+        $productFeatures = $this->ProductsFeature->ProductFeat->find('list');
+        $this->set(compact('productFeatures'));
 		$this->set(compact('products'));
 	}
 
@@ -78,6 +80,8 @@ class ProductsFeaturesController extends AppController {
         $products = $this->ProductsFeature->Product->find('list', array(
             'conditions'=> array('language_id'=>'1')
         ));
+        $productFeatures = $this->ProductsFeature->ProductFeat->find('list');
+        $this->set(compact('productFeatures'));
 		$this->set(compact('products'));
 	}
 

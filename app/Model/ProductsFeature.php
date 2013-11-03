@@ -55,6 +55,13 @@ class ProductsFeature extends AppModel {
 			'conditions' => '',
 			'fields' => '',
 			'order' => ''
-		)
+		),
+        'ProductFeat' => array(
+            'className' => 'ProductsFeats',
+            'foreignKey' => 'product_feature_id',
+            'conditions' => '',
+            'fields' => '',
+            'order' => ''
+        )
 	);
 }
