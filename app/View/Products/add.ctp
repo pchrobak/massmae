@@ -21,15 +21,15 @@
 			<?php
 				echo $this->Form->input('id');
 				echo $this->Form->input('visible');
-				echo $this->Form->input('featured');
+				//echo $this->Form->input('featured');
 				echo $this->Form->input('show_price');
                 echo $this->Form->input('language_id', array('options' => array('1' => 'English','2' => 'French','3' => 'German'), 'empty' =>'Select Language', 'label'=>'Language'));
                 echo $this->Form->input('parents', array('empty' => 'Select a Parent', 'label'=>'Parent Product (<small>if applicable</small>)'));
 				echo $this->Form->input('name', array('class' => 'input-xxlarge'));
-				echo $this->Form->input('series_id',array('empty' => 'Select a Series'));
-				echo $this->Form->input('Category');
+				//echo $this->Form->input('series_id',array('empty' => 'Select a Series'));
+				//echo $this->Form->input('Category');
 				echo $this->Form->input('quick_description', array('class' => 'input-xxlarge'));
-				echo $this->Form->input('body_copy', array('class' => 'ckeditor'));
+				//echo $this->Form->input('body_copy', array('class' => 'ckeditor'));
                 echo $this->Form->input('compatibility', array('class' => 'ckeditor'));
 				echo $this->Form->input('priced_per', array('class' => 'input-xlarge', 'options'=> array('each'=>'each','pair'=>'pair','system'=>'system'), 'empty'=>'Select Unit of Measure', 'label'=>'Unit Of Measure'));
 				echo $this->Form->input('msrp_usd', array('class' => 'input-xlarge'));

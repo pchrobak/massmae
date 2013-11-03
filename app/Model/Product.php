@@ -31,17 +31,9 @@ public $validate = array(
         'rule'    => 'notEmpty',
         'message' => 'You must select a language'
     ),
-	'series_id' => array (
-		'rule'    => 'notEmpty',
-        'message' => 'You must select a series'
-    ),
 	'quick_description' => array (
 		'rule'    => 'notEmpty',
         'message' => 'Quick Description cannot be empty'
-    ),
-	'body_copy' => array (
-		'rule'    => 'notEmpty',
-        'message' => 'Body copy cannot be empty'
     ),
 	'priced_per' => array (
 		'rule'    => 'notEmpty',
