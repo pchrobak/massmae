@@ -18,7 +18,7 @@
             <?php echo h($config['Config']['default_meta_title']); ?>
             &nbsp;
         </dd>
-        <dt><?php echo __('Default Meta Title'); ?></dt>
+        <dt><?php echo __('Default Meta Description'); ?></dt>
         <dd>
             <?php echo h($config['Config']['default_meta_description']); ?>
             &nbsp;
