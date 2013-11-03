@@ -22,6 +22,8 @@
             echo $this->Form->input('id');
             echo $this->Form->input('site_name');
             echo $this->Form->input('title_apend');
+            echo $this->Form->input('default_meta_title');
+            echo $this->Form->input('default_meta_description');
             echo $this->Form->input('contact_email');
             echo $this->Form->input('facebook');
             echo $this->Form->input('twitter');

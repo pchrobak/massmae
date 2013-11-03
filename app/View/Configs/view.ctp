@@ -13,6 +13,16 @@
 			<?php echo h($config['Config']['title_apend']); ?>
 			&nbsp;
 		</dd>
+        <dt><?php echo __('Default Meta Title'); ?></dt>
+        <dd>
+            <?php echo h($config['Config']['default_meta_title']); ?>
+            &nbsp;
+        </dd>
+        <dt><?php echo __('Default Meta Title'); ?></dt>
+        <dd>
+            <?php echo h($config['Config']['default_meta_description']); ?>
+            &nbsp;
+        </dd>
 		<dt><?php echo __('Contact Email'); ?></dt>
 		<dd>
 			<?php echo h($config['Config']['contact_email']); ?>
