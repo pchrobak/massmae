@@ -41,6 +41,7 @@
 		echo $this->Form->input('id');
 		echo $this->Form->input('visible');
 		echo $this->Form->input('company_name', array('class' => 'input-xxlarge'));
+        echo $this->Form->input('country_id', array('class' => 'input-xlarge', 'empty'=>'Select a Country','label'=>'Country'));
 		echo $this->Form->input('address', array('class' => 'ckeditor'));
 		echo $this->Form->input('phone', array('class' => 'input-xxlarge'));
 		echo $this->Form->input('website', array('class' => 'input-xxlarge'));?>

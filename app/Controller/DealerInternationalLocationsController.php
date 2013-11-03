@@ -32,6 +32,8 @@ class DealerInternationalLocationsController extends AppController {
 				$this->Session->setFlash('There was an error in saving this form.  Please make sure all require fields are filled in', 'default', array('class' => 'error_message'));
 			}
 		}
+        $countries = $this->DealerInternationalLocation->Country->find('list',array('fields' => array('short_name'),'order'=>'short_name asc'));
+        $this->set(compact('countries'));
 	}
 
 /**
@@ -56,6 +58,8 @@ class DealerInternationalLocationsController extends AppController {
 		} else {
 			$this->request->data = $this->DealerInternationalLocation->read(null, $id);
 		}
+        $countries = $this->DealerInternationalLocation->Country->find('list',array('fields' => array('short_name'),'order'=>'short_name asc'));
+        $this->set(compact('countries'));
 	}
 
 /**

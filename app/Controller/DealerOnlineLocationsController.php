@@ -32,6 +32,8 @@ class DealerOnlineLocationsController extends AppController {
 				$this->Session->setFlash('There was an error in saving this form.  Please make sure all require fields are filled in', 'default', array('class' => 'error_message'));
 			}
 		}
+        $countries = $this->DealerOnlineLocation->Country->find('list',array('fields' => array('short_name'),'order'=>'short_name asc'));
+        $this->set(compact('countries'));
 	}
 
 /**
@@ -56,6 +58,8 @@ class DealerOnlineLocationsController extends AppController {
 		} else {
 			$this->request->data = $this->DealerOnlineLocation->read(null, $id);
 		}
+        $countries = $this->DealerOnlineLocation->Country->find('list',array('fields' => array('short_name'),'order'=>'short_name asc'));
+        $this->set(compact('countries'));
 	}
 
 /**

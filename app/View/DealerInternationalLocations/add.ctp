@@ -27,6 +27,7 @@
 		echo $this->Form->input('visible');
 		echo $this->Form->input('type', array('class' => 'input-xlarge', 'options'=> array('international'=>'International Dealer','distributor'=>'International Distributor'), 'empty'=>'Select Type of International Dealer', 'label'=>'Dealer Type'));
 		echo $this->Form->input('company_name', array('class' => 'input-xxlarge'));
+        echo $this->Form->input('countries_id', array('class' => 'input-xlarge', 'empty'=>'Select a Country','label'=>'Country'));
 		echo $this->Form->input('address', array('class' => 'ckeditor'));
 		echo $this->Form->input('phone', array('class' => 'input-xxlarge'));
 		echo $this->Form->input('website', array('class' => 'input-xxlarge'));
