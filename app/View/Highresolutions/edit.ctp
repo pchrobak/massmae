@@ -40,6 +40,7 @@ function SetFileField( fileUrl )
 			<fieldset>
 			<?php
 		echo $this->Form->input('id');
+		echo $this->Form->input('language_id', array('options' => array('1' => 'English','2' => 'French','3' => 'German'), 'empty' =>'Select Language', 'label'=>'Language'));
 		echo $this->Form->input('product_id');
 		echo $this->Form->input('short_description');?>
 		<div class="input text">

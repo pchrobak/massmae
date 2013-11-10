@@ -19,6 +19,10 @@
 			<?php echo $this->Html->link($highresolution['Product']['name'], array('controller' => 'products', 'action' => 'view', $highresolution['Product']['id'])); ?>
 		</td>
 		<td><?php echo h($highresolution['Highresolution']['short_description']); ?>&nbsp;</td>
+		 <td><?php if($highresolution['Highresolution']['language_id'] == 1){?><img src='img/english.png'>
+            <?php }else if($highresolution['Highresolution']['language_id'] == 2){?><img src='img/french.png'>
+            <?php }else if($highresolution['Highresolution']['language_id'] == 3){?><img src='img/german.png'><?php }?>
+        </td>
 		<td><?php echo h($highresolution['Highresolution']['alt_text']); ?>&nbsp;</td>
 		<td><?php echo h($highresolution['Highresolution']['updated']); ?>&nbsp;</td>
 		<td><?php echo h($highresolution['Highresolution']['created']); ?>&nbsp;</td>

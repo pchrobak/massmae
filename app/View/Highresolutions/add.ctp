@@ -26,6 +26,7 @@ function SetFileField( fileUrl )
 	<fieldset>
 		<legend><?php echo __('Add Image'); ?></legend>
 	<?php
+		 echo $this->Form->input('language_id', array('options' => array('1' => 'English','2' => 'French','3' => 'German'), 'empty' =>'Select Language', 'label'=>'Language'));
 		echo $this->Form->input('product_id', array('empty'=>'Select a Product'));
 		echo $this->Form->input('short_description');?>
 		<div class="input text required">
