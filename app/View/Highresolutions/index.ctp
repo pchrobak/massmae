@@ -17,7 +17,7 @@
 	<tr>
 		<td><?php echo h($highresolution['Highresolution']['id']); ?>&nbsp;</td>
 		<td>
-			<?php echo $this->Html->link($highresolution['Product']['name'], array('controller' => 'products', 'action' => 'view', $highresolution['Product']['id'])); ?>
+			<?php echo $this->Html->link($highresolution['Product']['name'], array('controller' => 'products', 'action' => 'edit', $highresolution['Product']['id'])); ?>
 		</td>
 		<td><?php echo h($highresolution['Highresolution']['short_description']); ?>&nbsp;</td>
 		 <td><?php if($highresolution['Highresolution']['language_id'] == 1){?><img src='img/english.png'>
