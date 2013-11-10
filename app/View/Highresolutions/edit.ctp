@@ -21,7 +21,7 @@ function SetFileField( fileUrl )
 	
 	
 <div class="page-content">
-	<?php $this->Html->addCrumb('High Resolution Images', '/highresolution');
+	<?php $this->Html->addCrumb('High Resolution Images', '/highresolutions');
 	  $this->Html->addCrumb('Edit '.$this->data["Highresolution"]["short_description"], '/downloads');?>
 	
 	<fieldset>
