@@ -6,6 +6,7 @@
 			<th><?php echo $this->Paginator->sort('id'); ?></th>
 			<th><?php echo $this->Paginator->sort('product_id'); ?></th>
 			<th><?php echo $this->Paginator->sort('short_description'); ?></th>
+			<th><?php echo $this->Paginator->sort('language_id'); ?></th>
 			<th><?php echo $this->Paginator->sort('alt_text'); ?></th>
 			<th><?php echo $this->Paginator->sort('updated'); ?></th>
 			<th><?php echo $this->Paginator->sort('created'); ?></th>
