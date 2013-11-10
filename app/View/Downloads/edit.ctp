@@ -32,7 +32,7 @@ function SetFileField( fileUrl )
 					<span class="caret"></span>
 				</button>
 				<ul class="dropdown-menu">
-					<li><?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $this->Form->value('Download.id')), null, __('Are you sure you want to delete # %s?', $this->Form->value('Series.id'))); ?></li>
+					<li><?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $this->Form->value('Download.id')), null, __('Are you sure you want to delete # %s?', $this->Form->value('Highresolution.id'))); ?></li>
 		<li><?php echo $this->Html->link(__('List Downloads'), array('action' => 'index')); ?></li></ul>
 			</div>
 		</legend>
