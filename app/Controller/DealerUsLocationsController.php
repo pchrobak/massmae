@@ -86,10 +86,10 @@ class DealerUsLocationsController extends AppController {
                         }
                 }
                 $state = 'MD';
-                $maps_api ="ABQIAAAA7wZYTDCFNg0gc5A2SJu1oxRyOBrYBpKGlvc0MACy0UI1zYnFJRTOUnpbwvmXowRBF2XZp18KdbCpHA";
+                $maps_api ="AIzaSyCsv0804JJ-KC8Yupn-IYPsBLOIm_LgMoc";
                 $state = str_replace(" ", "%20", $state);
 
-                if($fh = fopen("http://maps.google.com/maps/geo?q=$wholestreet,+$wholecity,+$state&output=csv&oe=utf8&sensor=true&key=$maps_api","r")   ){
+                if($fh = fopen("https://maps.googleapis.com/maps/api/geocode/xml?address=$wholestreet,+$wholecity,+$state&sensor=true&key=$maps_api","r")   ){
                         while(!feof($fh)){
                                 usleep(150000);
                                 $output = fgets($fh, 1024);
