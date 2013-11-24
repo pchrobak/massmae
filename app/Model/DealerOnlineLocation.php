@@ -19,7 +19,7 @@ class DealerOnlineLocation extends AppModel {
 			'rule'    => 'notEmpty',
 			'message' => 'You must enter a company name'
 		),
-		'address' => array(
+		'address1' => array(
 			'rule'    => 'notEmpty',
 			'message' => 'You must enter an address'
 		),
