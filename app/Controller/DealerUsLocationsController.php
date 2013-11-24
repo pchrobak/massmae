@@ -96,10 +96,9 @@ class DealerUsLocationsController extends AppController {
                         }
                         fclose($fh);
                 }
-
-                        $csv = explode(",", $output);
-                        $long=$csv[2];
-                        $lat=$csv[3];
+				
+					var_dump($output);
+                       
 
         
 var_dump($long.','. $lat);
