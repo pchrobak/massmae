@@ -25,6 +25,69 @@ class DealerUsLocationsController extends AppController {
  */
 	public function add() {
 		if ($this->request->is('post')) {
+			
+			$wholestreet = "";
+         $wholecity = "";
+         $state = "";
+
+                $address1=explode(" ",$this->request->data['DealerUsLocation']['address1']);
+                $counter=count($address1);
+                for($i=0;$i<=$counter-1;$i++)
+                {
+                        if($i==$counter-1)
+                        {
+                                $wholestreet.=$address1[$i];
+                        }
+                        else
+                        {
+                                $wholestreet.=$address1[$i]."+";
+                        }
+                }
+                $city=explode(" ",$this->request->data['DealerUsLocation']['city']);
+                $num=count($city);
+                for($j=0;$j<=$num-1;$j++)
+                {
+                        if($i==$num-1)
+                        {
+                                $wholecity.=$city[$j];
+
+                        }
+                        else
+                        {
+                                $wholecity.=$city[$j]."+";
+
+                        }
+                }
+                $state = $this->request->data['DealerUsLocation']['state_id'];
+				
+				$statelookup = $this->DealerUsLocation->query("SELECT abbr FROM states WHERE id =$state ");
+				$state = $statelookup[0]['states']['abbr'];
+				
+				
+                $maps_api ="AIzaSyCsv0804JJ-KC8Yupn-IYPsBLOIm_LgMoc";
+                $state = str_replace(" ", "%20", $state);
+
+                if($fh = fopen("https://maps.googleapis.com/maps/api/geocode/xml?address=$wholestreet,+$wholecity,+$state&sensor=false","r")   ){
+                        
+                                $output = fread($fh, 8192);
+                      
+                        fclose($fh);
+                }
+			
+				$geo = new SimpleXMLElement($output);
+				$counter=0;
+				foreach($geo as $xml) 
+				{ 
+				if($counter > 0)
+				{
+						$this->request->data['DealerUsLocation']['longitude'] = $xml->geometry->location->lng;
+						$this->request->data['DealerUsLocation']['latitude'] = $xml->geometry->location->lat;
+					}
+					$counter++;
+				}
+				
+			
+			
 			$this->DealerUsLocation->create();
 			if ($this->DealerUsLocation->save($this->request->data)) {
 				$this->Session->setFlash('You have successfully Saved a Dealer US Location!', 'default', array('class' => 'success_message'));
@@ -50,9 +113,7 @@ class DealerUsLocationsController extends AppController {
 			throw new NotFoundException(__('Invalid dealer us location'));
 		}
 		if ($this->request->is('post') || $this->request->is('put')) {
-		var_dump($this->request->data);
-		
-		
+
 		 $wholestreet = "";
          $wholecity = "";
          $state = "";
@@ -85,33 +146,34 @@ class DealerUsLocationsController extends AppController {
 
                         }
                 }
-                $state = 'MD';
+                $state = $this->request->data['DealerUsLocation']['state_id'];
+				
+				$statelookup = $this->DealerUsLocation->query("SELECT abbr FROM states WHERE id =$state ");
+				$state = $statelookup[0]['states']['abbr'];
+				
+				
                 $maps_api ="AIzaSyCsv0804JJ-KC8Yupn-IYPsBLOIm_LgMoc";
                 $state = str_replace(" ", "%20", $state);
 
-                if($fh = fopen("https://maps.googleapis.com/maps/api/geocode/xml?address=$wholestreet,+$wholecity,+$state&sensor=true&key=$maps_api","r")   ){
-                        while(!feof($fh)){
-                                usleep(150000);
-                                $output = fgets($fh, 1024);
-                        }
+                if($fh = fopen("https://maps.googleapis.com/maps/api/geocode/xml?address=$wholestreet,+$wholecity,+$state&sensor=false","r")   ){
+                        
+                                $output = fread($fh, 8192);
+                      
                         fclose($fh);
                 }
+			
+				$geo = new SimpleXMLElement($output);
+				$counter=0;
+				foreach($geo as $xml) 
+				{ 
+				if($counter > 0)
+				{
+						$this->request->data['DealerUsLocation']['longitude'] = $xml->geometry->location->lng;
+						$this->request->data['DealerUsLocation']['latitude'] = $xml->geometry->location->lat;
+					}
+					$counter++;
+				}
 				
-					var_dump($output);
-                       
-
-        
-var_dump($long.','. $lat);
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
 		
 			if ($this->DealerUsLocation->save($this->request->data)) {
 				$this->Session->setFlash('You have successfully Saved a Dealer US Location!', 'default', array('class' => 'success_message'));

@@ -21,7 +21,7 @@ class DealerUsLocation extends AppModel {
 			'message' => 'You must enter a company name'
 		),
 		'address1' => array(
-			'rule'    => 'email',
+			'rule'    => 'notEmpty',
 			'message' => 'You must enter an address'
 		),
 		'city' => array(
